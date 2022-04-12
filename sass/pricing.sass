@@ -1,0 +1,83 @@
+@import './mixin'
+
+.pricing
+    @include flex(flex-start, center, column)
+    background: white
+    color: black
+    .content
+        @include flex(flex-start, flex-start)
+        width: 100%
+        margin-top: 50px
+        @media ( max-width: 900px )
+            @include flex(center, center, column)
+            .plan
+                width: 100%
+        @media ( max-width: 900px )
+            margin-top: 25px
+        .plan
+            flex: 1
+            text-align: center
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%)
+            &:hover
+                box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%)
+            h3
+                width: 100%
+                color: white
+                padding: 30px 0
+            &.basic
+                margin-right: 7.5px
+                @media ( max-width: 900px )
+                    margin-right: 0
+                    margin-bottom: 25px
+                h3
+                    background: #616161
+            &.premium
+                margin-left: 7.5px 
+                @media ( max-width: 900px )
+                    margin-left: 0
+                h3
+                    background: #f44336
+            ul
+                li
+                    padding: 20px 0
+                    border-bottom: 1px solid #ddd
+                    &.price
+                        padding: 35px 0
+                        font-size: 30px
+                        color: rgba(0, 0, 0, 0.6)
+            .download
+                background: #f1f1f1
+                padding: 20px 0
+                @include flex(center, center)
+                button 
+                    @include flex(center, center)
+                    padding: 10px 20px
+                    background: black
+                    color: white
+                    font-size: 20px
+                    transition: 0.3s
+                    svg
+                        width: 20px
+                        height: 20px
+                        fill: white
+                        margin-right: 7px
+                        transition: 0.3s
+                    &:hover 
+                        background: #ccc
+                        color: black
+                        svg
+                            fill: black
+
+@media ( max-width: 500px )
+    .pricing .content .plan
+        h3
+            padding: 15px 0
+        ul li
+            padding: 15px 0
+            &.price
+                padding: 25px 0
+        .download
+            padding: 0
+            button
+                padding: 10px 0
+                width: 100%

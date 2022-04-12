@@ -1,0 +1,108 @@
+@import './mixin'
+
+.main_blok
+    width: 1600px
+    position: relative
+    overflow: hidden
+    .take_tour
+        position: absolute
+        top: 50%
+        right: 20px
+        transform: translateY(-50%)
+        padding: 10px
+        border-radius: 3px
+        background: white
+        color: black
+        transition: 0.3s
+        &:hover 
+            background: black
+            color: white
+    .slider
+        position: relative
+        @include flex(flex-statr, center)
+        width: 100%
+        transition: left 0.5s
+        .slider_blok
+            position: relative
+            color: white
+            height: 100%
+            @include flex(center, center, column)
+            img
+                width: 1600px
+            .download_blok
+                position: absolute
+                top: 50%
+                left: 20px
+                transform: translateY(-50%)
+                background: #000000
+                padding: 20px 70px
+                border-radius: 10px
+                opacity: 0.65
+                transition: 0.3s
+                &:hover 
+                    opacity: 1
+                .subtitle
+                    padding-bottom: 20px
+                    position: relative
+                    text-align: center
+                    &::before
+                        content: ''
+                        position: absolute
+                        bottom: 0
+                        left: -50px
+                        width: calc( 100% + 100px )
+                        height: 1px
+                        background: #ffffff85
+                p
+                    padding: 20px 0
+                button
+                    width: calc( 100% + 100px )
+                    position: relative
+                    left: -50px
+                    padding: 10px 0
+                    @include flex(center, center)
+                    color: white
+                    &, svg
+                        transition: 0.3s
+                    svg
+                        width: 15px
+                        height: 15px
+                        margin-left: 5px
+                        fill: white
+                    &:hover 
+                        background: #b1b1b1!important
+                        color: black
+                        svg
+                            fill: black
+
+@media ( max-width: 1600px )
+    .main_blok
+        max-width: 100vw
+        .slider .slider_blok img
+            width: 100vw
+
+@media ( max-width: 1024px )
+    .main_blok 
+        height: max-content
+        .take_tour
+            height: max-content
+            transform: translateY(0%)
+            width: 100%
+            right: 0
+            border-radius: 0
+            position: static
+            background: black
+            color: white
+        .slider .slider_blok .download_blok
+            padding: 0
+            width: 100%
+            transform: none
+            top: 0
+            left: 0
+            opacity: 1
+            position: static
+            & .subtitle, & p
+                display: none
+            button
+                width: 100%
+                left: 0

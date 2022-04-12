@@ -1,0 +1,50 @@
+body {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+body, body * {
+  margin: 0;
+  padding: 0;
+}
+body .app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 1600px;
+  font-family: "Poppins";
+}
+@media (max-width: 1600px) {
+  body .app {
+    width: 100vw;
+  }
+}
+body .app .app_blok {
+  padding: 50px 15px;
+  width: 1570px;
+}
+@media (max-width: 1600px) {
+  body .app .app_blok {
+    width: calc(100vw - 30px);
+  }
+}
+@media (max-width: 700px) {
+  body .app .app_blok {
+    padding: 20px 15px;
+  }
+}
+
+ul, li {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=other.css.map */

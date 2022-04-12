@@ -1,0 +1,21 @@
+@import './mixin'
+
+footer
+    @include flex(center, center, column)
+    background: #f1f1f1
+    .social_media_list
+        @include flex(center, center)
+        margin-bottom: 25px
+        svg
+            width: 25px
+            height: 25px
+            fill: black
+            margin-right: 20px
+            &:last-child
+                margin-right: 0
+            &:hover
+                fill: rgba(0, 0, 0, 0.6)
+    p
+        font-size: 20px
+        @media ( max-width: 400px )
+            font-size: 18px

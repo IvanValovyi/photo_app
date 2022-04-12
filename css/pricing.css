@@ -1,0 +1,131 @@
+.pricing {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: white;
+  color: black;
+}
+.pricing .content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 50px;
+}
+@media (max-width: 900px) {
+  .pricing .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .pricing .content .plan {
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .pricing .content {
+    margin-top: 25px;
+  }
+}
+.pricing .content .plan {
+  flex: 1;
+  text-align: center;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.pricing .content .plan:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.pricing .content .plan h3 {
+  width: 100%;
+  color: white;
+  padding: 30px 0;
+}
+.pricing .content .plan.basic {
+  margin-right: 7.5px;
+}
+@media (max-width: 900px) {
+  .pricing .content .plan.basic {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+}
+.pricing .content .plan.basic h3 {
+  background: #616161;
+}
+.pricing .content .plan.premium {
+  margin-left: 7.5px;
+}
+@media (max-width: 900px) {
+  .pricing .content .plan.premium {
+    margin-left: 0;
+  }
+}
+.pricing .content .plan.premium h3 {
+  background: #f44336;
+}
+.pricing .content .plan ul li {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+.pricing .content .plan ul li.price {
+  padding: 35px 0;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.pricing .content .plan .download {
+  background: #f1f1f1;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.pricing .content .plan .download button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.pricing .content .plan .download button svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+  margin-right: 7px;
+  transition: 0.3s;
+}
+.pricing .content .plan .download button:hover {
+  background: #ccc;
+  color: black;
+}
+.pricing .content .plan .download button:hover svg {
+  fill: black;
+}
+
+@media (max-width: 500px) {
+  .pricing .content .plan h3 {
+    padding: 15px 0;
+  }
+  .pricing .content .plan ul li {
+    padding: 15px 0;
+  }
+  .pricing .content .plan ul li.price {
+    padding: 25px 0;
+  }
+  .pricing .content .plan .download {
+    padding: 0;
+  }
+  .pricing .content .plan .download button {
+    padding: 10px 0;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=pricing.css.map */

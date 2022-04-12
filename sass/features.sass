@@ -1,0 +1,33 @@
+@import './mixin'
+
+.features
+    background: #616161
+    color: white
+    @include flex(flex-start, center, column)
+    .features_list
+        margin-top: 25px
+        width: 100%
+        @include flex(space-evenly, center)
+        flex-wrap: wrap
+        .feature
+            width: 25%
+            @include flex(center, center, column)
+            margin: 25px 0
+            svg
+                width: 70px
+                height: 70px
+                margin-bottom: 15px
+
+@media ( max-width: 1024px )
+    .features .features_list .feature
+        width: calc( 100% / 3 )
+    
+@media ( max-width: 600px )
+    .features .features_list .feature
+        width: 50%
+    
+@media ( max-width: 400px )
+    .features .features_list .feature
+        svg
+            width: 50px
+            height: 50px

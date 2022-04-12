@@ -1,0 +1,36 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #f1f1f1;
+}
+footer .social_media_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 25px;
+}
+footer .social_media_list svg {
+  width: 25px;
+  height: 25px;
+  fill: black;
+  margin-right: 20px;
+}
+footer .social_media_list svg:last-child {
+  margin-right: 0;
+}
+footer .social_media_list svg:hover {
+  fill: rgba(0, 0, 0, 0.6);
+}
+footer p {
+  font-size: 20px;
+}
+@media (max-width: 400px) {
+  footer p {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

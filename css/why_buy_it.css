@@ -1,0 +1,98 @@
+.why_buy_it {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  background: white;
+}
+.why_buy_it .text_blok {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.why_buy_it .text_blok button, .why_buy_it .text_blok .available {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.why_buy_it .text_blok h3, .why_buy_it .text_blok p, .why_buy_it .text_blok button {
+  margin-bottom: 30px;
+}
+.why_buy_it .text_blok h2 {
+  margin-bottom: 10px;
+}
+.why_buy_it .text_blok .images svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 7px;
+}
+.why_buy_it .text_blok .images svg:nth-child(1) {
+  fill: #4CAF50;
+}
+.why_buy_it .text_blok .images svg:nth-child(3) {
+  fill: #2196F3;
+}
+.why_buy_it .text_blok button {
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
+.why_buy_it .text_blok button svg {
+  margin-right: 7px;
+  width: 15px;
+  height: 15px;
+  fill: black;
+}
+.why_buy_it .text_blok button:hover {
+  background: black;
+  color: white;
+}
+.why_buy_it .text_blok button:hover svg {
+  fill: white;
+}
+.why_buy_it .text_blok .available {
+  font-size: 20px;
+}
+.why_buy_it img {
+  margin-left: 165px;
+  width: 335px;
+}
+
+@media (max-width: 1024px) {
+  .why_buy_it {
+    align-items: flex-start !important;
+  }
+  .why_buy_it img {
+    width: 320px;
+    margin-left: 30px;
+  }
+  .why_buy_it .text_blok h3, .why_buy_it .text_blok p, .why_buy_it .text_blok button {
+    margin-bottom: 20px;
+  }
+  .why_buy_it .text_blok h2 {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 700px) {
+  .why_buy_it {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .why_buy_it img {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .why_buy_it .text_blok h3 {
+    margin-bottom: 10px;
+  }
+  .why_buy_it img {
+    width: 250px;
+  }
+}
+
+/*# sourceMappingURL=why_buy_it.css.map */

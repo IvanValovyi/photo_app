@@ -1,0 +1,29 @@
+@import './mixin'
+body
+    &, *
+        margin: 0
+        padding: 0
+    background: black
+    @include flex(center, center)
+    .app
+        @include flex(center, center, column)
+        width: 1600px
+        font-family: 'Poppins'
+        @media ( max-width: 1600px )
+            width: 100vw
+        .app_blok
+            padding: 50px 15px
+            width: 1570px
+            @media ( max-width: 1600px )
+                width: calc( 100vw - 30px )
+            @media ( max-width: 1024px )
+            @media ( max-width: 700px )
+                padding: 20px 15px
+
+ul, li
+    list-style: none
+
+button
+    outline: none
+    border: none
+    cursor: pointer

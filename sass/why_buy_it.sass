@@ -1,0 +1,69 @@
+@import './mixin'
+
+.why_buy_it
+    @include flex(space-between, center)
+    background: white
+    .text_blok
+        @include flex(flex-start, flex-start, column)
+        button, .available
+            @include flex(center, center)
+        h3, p, button
+            margin-bottom: 30px
+        h2
+            margin-bottom: 10px
+        .images
+            svg
+                width: 20px
+                height: 20px
+                margin-left: 7px
+                &:nth-child(1)
+                    fill: #4CAF50
+                &:nth-child(3)
+                    fill: #2196F3
+        button
+            padding: 10px 20px
+            background: white
+            color: black
+            border: 1px solid black
+            svg
+                margin-right: 7px
+                width: 15px
+                height: 15px
+                fill: black
+            &:hover 
+                background: black
+                color: white
+                svg
+                    fill: white
+        .available
+            font-size: 20px
+    img
+        margin-left: 165px
+        width: 335px
+
+@media ( max-width: 1024px )
+    .why_buy_it
+        align-items: flex-start!important
+        img
+            width: 320px
+            margin-left: 30px
+        .text_blok
+            h3, p, button
+                margin-bottom: 20px
+            h2
+                margin-bottom: 0
+
+@media ( max-width: 700px )
+    .why_buy_it
+        flex-direction: column!important
+        align-items: center!important
+        img
+            margin-left: 0
+            margin-top: 20px
+
+@media ( max-width: 450px )
+    .why_buy_it 
+        .text_blok h3
+            margin-bottom: 10px
+        img
+            width: 250px
